@@ -241,7 +241,7 @@ def make_mpl_axes(axes_lims=[[0,1], [0,1], [0,1]], xlabel='X', ylabel='Y', zlabe
     plt.savefig(savename, dpi=600)
     plt.show()
 
-def export_geometry(source, savename=None, filetype='x3d', verbose=True):
+def export_geometry(source, savename=None, filetype='gltf', verbose=True):
 
     if filetype == 'vtkjs':
 

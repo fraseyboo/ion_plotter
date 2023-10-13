@@ -72,6 +72,6 @@ actor_dict.update({'water': vtk_utils.add_polydata(water_positions, scalar_dict=
 # water_positions, water_velocities = get_ion_positions('example_inputs/Water-h2_pos.csv')
 # actor_dict.update({'water': vtk_utils.add_polydata(water_positions, scalar_dict=water_velocities[:,0], glyph_scale=2*0.01, glyph_type='sphere', colors='dark_red')})
 
-
+print('Press \'s\' to save geometry')
 
 plot_utils.plot_vtk(actor_dict=actor_dict, use_qt=False, colormap='viridis')

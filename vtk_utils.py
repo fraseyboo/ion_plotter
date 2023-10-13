@@ -347,8 +347,25 @@ class MyInteractorStyle(vtk.vtkInteractorStyleTrackballCamera):
             self.camera_zoom_in()
         if key == 'minus':
             self.camera_zoom_out()
+        if key == 's':
+            self.export_geometry()
         return
 
+
+    def export_geometry(self, savename='export.gltf', verbose=True):
+        if verbose:
+            print('writing GLTF to %s' % savename)
+        try:
+            exporter = vtk.vtkGLTFExporter()
+        except AttributeError:
+            print('Gltf exporting is not supported in your version of VTK, try updating')
+        exporter.SetInput(self.parent.GetRenderWindow())
+        exporter.InlineDataOn()
+        exporter.SetFileName(savename)
+        exporter.Update()
+        exporter.Write()
+        if verbose:
+            print('File written')
 
     def left_button_press_event(self, obj, event):
         if self.verbose:
