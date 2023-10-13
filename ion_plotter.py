@@ -7,7 +7,7 @@ from matplotlib import pyplot as plt
 
 # ion_path = '/home/grtdaq/Downloads/config783/Calcium_pos.csv'
 # ion_path = '/home/grtdaq/Downloads/config783/Krypton_pos.csv'
-ion_path = '/home/grtdaq/Downloads/config783/Water-h2_pos.csv'
+ion_path = 'example_inputs/Water-h2_pos.csv'
 
 
 
@@ -43,24 +43,35 @@ def get_ion_positions(ion_path):
 
 actor_dict = dict()
 
-# calcium_positions, calcium_velocities = get_ion_positions('/home/grtdaq/Downloads/config783/Calcium_pos.csv')
+# calcium_positions, calcium_velocities = get_ion_positions('example_inputs/Calcium_pos.csv')
 # actor_dict.update({'<calcium': vtk_utils.add_polydata(calcium_positions, scalar_dict=calcium_velocities[:,1], glyph_scale=2*0.0118, glyph_type='sphere', colormap='viridis', opacity=1)})
 
-# krypton_positions, krypton_velocities = get_ion_positions('/home/grtdaq/Downloads/config783/Krypton_pos.csv')
+# krypton_positions, krypton_velocities = get_ion_positions('example_inputs/Krypton_pos.csv')
 # actor_dict.update({'krypton': vtk_utils.add_polydata(krypton_positions, scalar_dict=krypton_velocities[:,0], glyph_scale=0.03, glyph_type='sphere', colormap='hot')})
 
-# water_positions, water_velocities = get_ion_positions('/home/grtdaq/Downloads/config783/Water-h2_pos.csv')
+# water_positions, water_velocities = get_ion_positions('example_inputs/Water-h2_pos.csv')
 # actor_dict.update({'water': vtk_utils.add_polydata(water_positions, scalar_dict=water_velocities[:,0], glyph_scale=0.03, glyph_type='sphere', colormap='Greys')})
 
-calcium_positions, calcium_velocities = get_ion_positions('/home/grtdaq/Downloads/config783/Calcium_pos.csv')
-actor_dict.update({'calcium': vtk_utils.add_polydata(calcium_positions, scalar_dict=calcium_velocities[:,0], glyph_scale=2*0.0118, glyph_type='sphere', colors='dark_blue', opacity=0.2)})
 
-krypton_positions, krypton_velocities = get_ion_positions('/home/grtdaq/Downloads/config783/Krypton_pos.csv')
-actor_dict.update({'krypton': vtk_utils.add_polydata(krypton_positions, scalar_dict=krypton_velocities[:,0], glyph_scale=2*0.0169, glyph_type='sphere', colors='dark_green')})
+calcium_positions, calcium_velocities = get_ion_positions('example_inputs/Calcium_pos.csv')
+actor_dict.update({'calcium': vtk_utils.add_polydata(calcium_positions, scalar_dict=calcium_velocities[:,0], glyph_scale=2*0.0118, glyph_type='sphere', colors='blue', opacity=0.2)})
 
-water_positions, water_velocities = get_ion_positions('/home/grtdaq/Downloads/config783/Water-h2_pos.csv')
-actor_dict.update({'water': vtk_utils.add_polydata(water_positions, scalar_dict=water_velocities[:,0], glyph_scale=2*0.01, glyph_type='sphere', colors='dark_red')})
+krypton_positions, krypton_velocities = get_ion_positions('example_inputs/Krypton_pos.csv')
+actor_dict.update({'krypton': vtk_utils.add_polydata(krypton_positions, scalar_dict=krypton_velocities[:,0], glyph_scale=2*0.0169, glyph_type='sphere', colors='green')})
+
+water_positions, water_velocities = get_ion_positions('example_inputs/Water-h2_pos.csv')
+actor_dict.update({'water': vtk_utils.add_polydata(water_positions, scalar_dict=water_velocities[:,0], glyph_scale=2*0.01, glyph_type='sphere', colors='red')})
+
+
+# calcium_positions, calcium_velocities = get_ion_positions('example_inputs/Calcium_pos.csv')
+# actor_dict.update({'calcium': vtk_utils.add_polydata(calcium_positions, scalar_dict=calcium_velocities[:,0], glyph_scale=2*0.0118, glyph_type='sphere', colors='dark_blue', opacity=0.2)})
+
+# krypton_positions, krypton_velocities = get_ion_positions('example_inputs/Krypton_pos.csv')
+# actor_dict.update({'krypton': vtk_utils.add_polydata(krypton_positions, scalar_dict=krypton_velocities[:,0], glyph_scale=2*0.0169, glyph_type='sphere', colors='dark_green')})
+
+# water_positions, water_velocities = get_ion_positions('example_inputs/Water-h2_pos.csv')
+# actor_dict.update({'water': vtk_utils.add_polydata(water_positions, scalar_dict=water_velocities[:,0], glyph_scale=2*0.01, glyph_type='sphere', colors='dark_red')})
 
 
 
-plot_utils.plot_vtk(actor_dict=actor_dict, glyph_scale=0.03, glyph_type='sphere', use_qt=True, colormap='viridis')
+plot_utils.plot_vtk(actor_dict=actor_dict, use_qt=True, colormap='viridis')
