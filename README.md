@@ -30,4 +30,9 @@ The surface roughness allows for different rendering textures:
 
 ![Screenshot](plots/glass_crystal_2.png)
 
+Scalar values can be used to define the colormap & radii
 
+![Screenshot](plots/vtk_render.png)
+
+
+![Screenshot](plots/viridis.png)
