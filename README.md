@@ -12,7 +12,7 @@ If using this program in academic publications please consider citing us so that
   year = {2023},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{ttps://github.com/fraseyboo/ion_plotter/master}}
+  howpublished = {\url{https://github.com/fraseyboo/ion_plotter/master}}
 }
 ```
 
@@ -30,4 +30,9 @@ The surface roughness allows for different rendering textures:
 
 ![Screenshot](plots/glass_crystal_2.png)
 
+Scalar values can be used to define the colormap & radii
 
+![Screenshot](plots/vtk_render.png)
+
+
+![Screenshot](plots/viridis.png)
