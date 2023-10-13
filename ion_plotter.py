@@ -74,4 +74,4 @@ actor_dict.update({'water': vtk_utils.add_polydata(water_positions, scalar_dict=
 
 
 
-plot_utils.plot_vtk(actor_dict=actor_dict, use_qt=True, colormap='viridis')
+plot_utils.plot_vtk(actor_dict=actor_dict, use_qt=False, colormap='viridis')

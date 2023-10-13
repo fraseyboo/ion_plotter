@@ -1,39 +1,20 @@
-# from socket import NI_NOFQDN
-# from turtle import color
-from builtins import FloatingPointError
 
-import warnings
 import matplotlib
 from matplotlib import pyplot as plt
-# from matplotlib.colors import PowerNorm
 import numpy as np
-# from pyparsing import col
-from sklearn.decomposition import PCA
-from sklearn.metrics import plot_roc_curve
+
 from tqdm import tqdm, trange
 from scipy.spatial import Voronoi, voronoi_plot_2d
-import math
-from scipy.spatial import ConvexHull
-from matplotlib.patches import CirclePolygon, Patch, Circle, RegularPolygon
-from matplotlib.collections import PatchCollection, LineCollection
-from matplotlib.path import Path
-from matplotlib.projections.polar import PolarAxes
-from matplotlib.projections import register_projection
-from matplotlib.spines import Spine
-from matplotlib.transforms import Affine2D
-import matplotlib.cm as cm
+
 import vtk
 from vtk.util import numpy_support
 from matplotlib import colors as mcolors
 # from scipy.stats import norm as snorm
-
-import qt_utils
+try:
+    import qt_utils
+except ImportError:
+    print('Could not import qt properly')
 import vtk_utils
-
-
-
-import matplotlib.patches as patches
-from matplotlib.collections import PatchCollection
 
 try:
     matplotlib.rcParams.update({

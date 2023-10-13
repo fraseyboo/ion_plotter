@@ -3,10 +3,7 @@ from vtk.util import numpy_support
 import math
 from tqdm import tqdm, trange
 import numpy as np
-import warnings
-
 import matplotlib
-from matplotlib import pyplot as plt
 
 try:
     matplotlib.rcParams.update({

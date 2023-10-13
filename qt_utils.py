@@ -27,20 +27,16 @@ import vtk
 from PyQt5.QtOpenGL import QGLFormat
 
 from qt_utils_rangeslider import *
-# import types
+
 import warnings
 import math
 
-import plot_utils
 import vtk_utils
 
 
 from matplotlib import pyplot as plt
 from matplotlib.image import imread as imread
 
-from mpl_toolkits.axes_grid1 import Divider, Size
-
-from matplotlib.patches import Rectangle, Circle
 
 from matplotlib.collections import QuadMesh, LineCollection, PatchCollection
 
