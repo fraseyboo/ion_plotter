@@ -12,7 +12,7 @@ If using this program in academic publications please consider citing us so that
   year = {2023},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{ttps://github.com/fraseyboo/ion_plotter/master}}
+  howpublished = {\url{https://github.com/fraseyboo/ion_plotter/master}}
 }
 ```
 
